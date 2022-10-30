@@ -1527,7 +1527,7 @@ good_preamble:
 
             /* Skip this message if we are sure it's fine. */
             if (mm.crcok) {
-                j += (MODES_PREAMBLE_US+(msglen*8))*2;
+                j += (MODES_PREAMBLE_US+(msglen/8))*2;
                 good_message = 1;
                 if (use_correction)
                     mm.phase_corrected = 1;
